@@ -13,14 +13,17 @@ This repository contains **Dockerfile** of [Elasticsearch](http://www.elasticsea
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/sxoded/elasticsearch-head) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull sxoded/elasticsearch-head`
+2. Download [automated build](https://registry.hub.docker.com/u/sxoded/elasticsearch) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull sxoded/elasticsearch`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="sxoded/elasticsearch-head" github.com/sxoded/elasticsearch-head`)
+this method will install the head plugin only. alternatively, you can build an image from Dockerfile:
+ `docker build -t="sxoded/elasticsearch" github.com/sxoded/elasticsearch`)
+
+if you want to build the image with more plugins - add them to the plugins file.
 
 
 ### Usage
 
-    docker run -d -p 9200:9200 -p 9300:9300 sxoded/elasticsearch-head
+    docker run -d -p 9200:9200 -p 9300:9300 sxoded/elasticsearch
 
 #### Attach persistent/shared directories
 
@@ -37,7 +40,7 @@ This repository contains **Dockerfile** of [Elasticsearch](http://www.elasticsea
   3. Start a container by mounting data directory and specifying the custom configuration file:
 
     ```sh
-    docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data sxoded/elasticsearch-head /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
+    docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data sxoded/elasticsearch /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
     ```
 
 After few seconds, open `http://<host>:9200` to see the result.
