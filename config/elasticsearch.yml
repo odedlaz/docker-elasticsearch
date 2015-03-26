@@ -3,3 +3,5 @@ path:
    logs: /data/logs
    plugins: /elasticsearch/plugins
    work: /data/work
+   scripts: /data/scripts
+script.disable_dynamic: false
