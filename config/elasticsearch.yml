@@ -1,7 +1,7 @@
 path:
-   data: /data/data
-   logs: /data/logs
-   plugins: /elasticsearch/plugins
-   work: /data/work
-   scripts: /data/scripts
+   data: /usr/share/elasticsearch/data/data
+   logs: /usr/share/elasticsearch/data/logs
+   plugins: /usr/share/elasticsearch/plugins
+   work: /usr/share/elasticsearch/data/work
+   scripts: /usr/share/elasticsearch/data/scripts
 script.disable_dynamic: false
