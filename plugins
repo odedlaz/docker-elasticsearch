@@ -1,2 +1,3 @@
 mobz/elasticsearch-head
 elasticsearch/elasticsearch-lang-python/2.4.1
+elasticsearch/elasticsearch-river-rabbitmq/2.4.1
